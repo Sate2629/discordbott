@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const fs = require("fs")
 const config = require("./config.json")
 
-var a=0
+var a=0;
 client.on("ready", () => {
   console.log("I am ready!");
 
@@ -31,7 +31,7 @@ client.on("message", (message) => {
   	}
   	}
   	if(message.content.startsWith(config.prefix + "clear")) {
-  		var a=0
+  		var a=0;
   		global DELAY := -1 ;ms
  
     		While (a<100){
