@@ -32,7 +32,6 @@ client.on("message", (message) => {
   	}
   	if(message.content.startsWith(config.prefix + "clear")) {
   		var a=0;
-  		global DELAY := -1 ;ms
  
     		While (a<100){
         		Send,{UP} {control down}a{control up} {Backspace} {Enter 2}
