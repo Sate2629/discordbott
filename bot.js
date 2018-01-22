@@ -16,6 +16,16 @@ client.on("message", (message) => {
 
 	if(!message.content.startsWith(config.prefix)) return;
 	
+	if(message.content.startsWith(config.prefix + "clear")) {
+		var del = 0;
+		let mdel = message.content.slice(6,message.content.length)
+		while (del >== mdel) {
+			message.delete();
+			del++;
+		}
+		
+	}
+	
 	if(message.content.startsWith(config.prefix + "say")) {
 		message.delete();
 		message.channel.send(message.content.slice(4,message.content.length));
