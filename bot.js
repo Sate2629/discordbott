@@ -29,6 +29,9 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
+	if (message.content.startsWith("?help") {
+	    message.channel.send("The prefix is " + config.prefix);
+	}
 });
 
 client.login(config.token);
