@@ -16,6 +16,11 @@ client.on("message", (message) => {
 
 	if(!message.content.startsWith(config.prefix)) return;
 	
+	if(message.content.startsWith(config.prefix + "say")) {
+		message.delete(1000);
+		message.channel.send(message.content.slice(4,message.content.length));
+	}
+	
   	if (message.content.startsWith(config.prefix + "ping")) {
     	message.channel.send("pong!");
   	}
