@@ -17,7 +17,7 @@ client.on("message", (message) => {
 	if(!message.content.startsWith(config.prefix)) return;
 	
 	if(message.content.startsWith(config.prefix + "say")) {
-		message.delete;
+		message.delete();
 		message.channel.send(message.content.slice(4,message.content.length));
 	}
 	
