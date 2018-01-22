@@ -10,11 +10,11 @@ client.on("ready", () => {
 
 client.on("message", (message) => {
 
-	if(!message.content.startsWith(config.prefix)) return;
-
-  if(message.content.startsWith("?help")) {
-	    message.channel.send(config.prefix);
+   if(message.content.startsWith("?help") {
+	    message.channel.send("The prefix is " + config.prefix);
 	}
+
+	if(!message.content.startsWith(config.prefix)) return;
 	
   	if (message.content.startsWith(config.prefix + "ping")) {
     	message.channel.send("pong!");
