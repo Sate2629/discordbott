@@ -12,7 +12,7 @@ client.on("message", (message) => {
 
 	if(!message.content.startsWith(config.prefix)) return;
 
-  if(message.content.startsWith("?help") {
+  if(message.content.startsWith("?help")) {
 	    message.channel.send("The prefix is " + config.prefix);
 	}
 	
