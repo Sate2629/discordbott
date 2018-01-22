@@ -19,7 +19,7 @@ client.on("message", (message) => {
 	if(message.content.startsWith(config.prefix + "clear")) {
 		var del = 0;
 		let mdel = message.content.slice(6,message.content.length)
-		while (del >== mdel) {
+		while (del > mdel) {
 			message.delete();
 			del++;
 		}
