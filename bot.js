@@ -20,7 +20,7 @@ client.on("message", (message) => {
 		var del = 0;
 		var mdel = 10;
 		while (del < mdel) {
-			message.delete();
+			message.delete(3000);
 			del++;
 		}
 		
