@@ -8,8 +8,9 @@ client.on("ready", () => {
 
 });
 
-var dc = Math.random() *20;
+var dc = Math.floor(Math.random() *20);
 dc++;
+console.log(dc);
 
 client.on("message", (message) => {
 
