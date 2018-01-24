@@ -8,7 +8,10 @@ client.on("ready", () => {
 
 });
 
+var dc = math.random*20;
+
 client.on("message", (message) => {
+	console.log(dc);
 
    if(message.content.startsWith("?help")) {
 	    message.channel.send("The prefix is " + config.prefix);
