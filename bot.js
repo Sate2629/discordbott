@@ -8,16 +8,22 @@ client.on("ready", () => {
 
 });
 
-var dc = math.random*20;
+var dc = Math.random() *20;
+dc++;
 
 client.on("message", (message) => {
-	console.log(dc);
 
    if(message.content.startsWith("?help")) {
 	    message.channel.send("The prefix is " + config.prefix);
 	}
 
 	if(!message.content.startsWith(config.prefix)) return;
+	
+	if(message.content.startsWith(config.prefix + "roll d20") {
+	   var dc = Math.random() * 20;
+	   dc++;
+	   message.channel.send(dc);
+	   }
 	
 	if(message.content.startsWith(config.prefix + "clear")) {
 		var del = 0;
