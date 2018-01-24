@@ -19,7 +19,7 @@ client.on("message", (message) => {
 
 	if(!message.content.startsWith(config.prefix)) return;
 	
-	if(message.content.startsWith(config.prefix + "roll d20") {
+	if(message.content.startsWith(config.prefix + "roll d20")) {
 	   var dc = Math.random() * 20;
 	   dc++;
 	   message.channel.send(dc);
