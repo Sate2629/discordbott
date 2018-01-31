@@ -60,7 +60,7 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
-	if (message.content.startsWith(config.prefix + "aaa@aaa") {
+	if (message.content.startsWith(config.prefix + "aaa@aaa")) {
 	        var on = 1;
 	        message.channel.send("on");
 	}
