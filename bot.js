@@ -10,6 +10,7 @@ client.on("ready", () => {
 
 var dc = Math.floor(Math.random() *20);
 dc++;
+var num = 20;
 console.log(dc);
 
 client.on("message", (message) => {
@@ -20,9 +21,9 @@ client.on("message", (message) => {
 
 	if(!message.content.startsWith(config.prefix)) return;
 	
-	if(message.content.startsWith(config.prefix + "roll d20")) {
-	   var dc = Math.floor(Math.random() * 20);
-	   dc++;
+	if(message.content.startsWith(config.prefix + "roll d")) {
+	   var num = message.content.slice(7,message.content.length);
+	   var dc = Math.floor(Math.random() * num)
 	   message.channel.send(dc);
 	   }
 	
