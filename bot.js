@@ -61,12 +61,12 @@ client.on("message", (message) => {
   	}
   	}
 	if (message.content.startsWith(config.prefix + "aaa@aaa")) {
-	        if (on === 0) {
-		    var on = 1;
+	        if (on === 1) {
+		    var on = 0;
 	            message.channel.send("on");
 		}
-		if (on === 1) {
-		    var on = 0;
+		if (on === 0 && message.content.startsWith(;)) {
+		    var on = 1;
 		    message.channel.send("off");
 		}
 	}
