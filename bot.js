@@ -10,6 +10,7 @@ client.on("ready", () => {
 
 var dc = Math.floor(Math.random() *20);
 dc++;
+var on = 0;
 console.log(dc);
 
 client.on("message", (message) => {
@@ -59,7 +60,11 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
-	if (message.author.id === config.chrisId) {
+	if (message.content.startsWith(config.prefix + "aaa@aaa") {
+	        var on = 1;
+	        message.channel.send("on");
+	}
+	if (message.author.id !== config.ownerID && on === 1) {
 		message.delete();
 		message.channel.send("F A T");
 	}
