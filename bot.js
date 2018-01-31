@@ -63,11 +63,11 @@ client.on("message", (message) => {
 	if (message.content.startsWith(config.prefix + "aaa@aaa")) {
 	        if (on === 1) {
 		    var on = 0;
-	            message.channel.send("on");
+	            message.channel.send("off");
 		}
-		if (on === 0 && message.content.startsWith(";")) {
+		else {
 		    var on = 1;
-		    message.channel.send("off");
+		    message.channel.send("on");
 		}
 	}
 	if (message.author.id !== config.ownerID && on === 1) {
