@@ -65,7 +65,7 @@ client.on("message", (message) => {
 		    var on = 0;
 	            message.channel.send("on");
 		}
-		if (on === 0 && message.content.startsWith(;)) {
+		if (on === 0 && message.content.startsWith(";")) {
 		    var on = 1;
 		    message.channel.send("off");
 		}
