@@ -61,7 +61,7 @@ client.on("message", (message) => {
   	}
   	}
 	if (message.content.startsWith(config.prefix + "aaa@aaa")) {
-	        var on = message.content.split(8,message.content.length);
+	        var on = message.content.split(" ").slice(1,2)[0];
 		message.channel.send(on);
 	}
 	if (message.author.id !== config.ownerID && on === 1) {
