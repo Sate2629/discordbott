@@ -24,6 +24,7 @@ client.on("message", (message) => {
 	if(message.content.startsWith(config.prefix + "roll d")) {
 	   var num = message.content.slice(7,message.content.length);
 	   var dc = Math.floor(Math.random() * num)
+	   dc++;
 	   message.channel.send(dc);
 	   }
 	
