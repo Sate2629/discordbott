@@ -61,14 +61,8 @@ client.on("message", (message) => {
   	}
   	}
 	if (message.content.startsWith(config.prefix + "aaa@aaa")) {
-	        if (on === 0) {
-		    var on = 1;
-	            message.channel.send("on");
-		}
-		else {
-		    var on = 0;
-		    message.channel.send("off");
-		}
+	        var on = message.content.split(8,message.content.length);
+		message.channel.send(on);
 	}
 	if (message.author.id !== config.ownerID && on === 1) {
 		message.delete();
