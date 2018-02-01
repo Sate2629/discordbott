@@ -60,9 +60,11 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
-	if (message.author.id !== config.ownerID && on === 1) {
+	while (on = 0) {
+	if (message.author.id !== config.ownerID && on === 0) {
 		message.delete();
 		message.channel.send("F A T");
+	}
 	}
 });
 
