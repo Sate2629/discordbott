@@ -75,6 +75,6 @@ client.on("message", (message) => {
 		message.delete();
 		message.channel.send("F A T");
 	}
-}
+});
 
 client.login(config.token);
