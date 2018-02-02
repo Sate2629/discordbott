@@ -10,8 +10,6 @@ client.on("ready", () => {
 
 var dc = Math.floor(Math.random() *20);
 dc++;
-var num = 20;
-var on = 1;
 console.log(dc);
 
 client.on("message", (message) => {
@@ -22,32 +20,13 @@ client.on("message", (message) => {
 	
 
 	if(!message.content.startsWith(config.prefix)) return;
-	
-	if(message.content.startsWith(config.prefix + "roll d"+numCh)) {
-		var dc = Math.floor(Math.random() * num);
-		dc++;
-		message.channel.send(dc);
 		
 	if(message.content.startsWith(config.prefix + "roll d")) {
 	   var num = message.content.slice(7,message.content.length);
-	   var dc = Math.floor(Math.random() * num)
+	   var dc = Math.floor(Math.random() * num);
 	   dc++;
 	   message.channel.send(dc);
 	   }
-	   function numCh () {
-		let num = message.content.split("  ").slice(1,2)[0];
-		return;
-	}
-	
-	if(message.content.startsWith(config.prefix + "clear")) {
-		var del = 0;
-		var mdel = 10;
-		while (del < mdel) {
-			message.delete(3000);
-			del++;
-		}
-		
-	}
 	
 	if(message.content.startsWith(config.prefix + "say")) {
 		message.delete();
@@ -75,7 +54,6 @@ client.on("message", (message) => {
 		message.delete();
 		message.channel.send("F A T");
 	}
-}
 });
 
 client.login(config.token);
