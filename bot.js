@@ -10,7 +10,11 @@ client.on("ready", () => {
 
 var dc = Math.floor(Math.random() *20);
 dc++;
+<<<<<<< HEAD
 var num = 20;
+=======
+var on = 1;
+>>>>>>> 77fb38594b3a91665d63493d2c6df9f76836a3b7
 console.log(dc);
 
 client.on("message", (message) => {
@@ -22,10 +26,18 @@ client.on("message", (message) => {
 
 	if(!message.content.startsWith(config.prefix)) return;
 	
+<<<<<<< HEAD
 	if(message.content.startsWith(config.prefix + "roll d"+numCh)) {
 		var dc = Math.floor(Math.random() * num);
 		dc++;
 		message.channel.send(dc);
+=======
+	if(message.content.startsWith(config.prefix + "roll d")) {
+	   var num = message.content.slice(7,message.content.length);
+	   var dc = Math.floor(Math.random() * num)
+	   dc++;
+	   message.channel.send(dc);
+>>>>>>> 77fb38594b3a91665d63493d2c6df9f76836a3b7
 	   }
 	   function numCh () {
 		let num = message.content.split("  ").slice(1,2)[0];
@@ -64,6 +76,12 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
+	while (on = 0) {
+	if (message.author.id !== config.ownerID && on === 0) {
+		message.delete();
+		message.channel.send("F A T");
+	}
+	}
 });
 
 client.login(config.token);
