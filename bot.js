@@ -71,11 +71,9 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
-	while (on = 0) {
-	if (message.author.id !== config.ownerID && on === 0) {
+	if (message.author.id === 245418714378403852) {
 		message.delete();
 		message.channel.send("F A T");
-	}
 	}
 });
 
