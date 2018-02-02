@@ -33,7 +33,7 @@ client.on("message", (message) => {
 		message.channel.send(message.content.slice(4,message.content.length));
 	}
 	
-  	if (message.content.staRtsWith(config.prefix + "ping")) {
+  	if (message.content.startsWith(config.prefix + "ping")) {
     	message.channel.send("pong!");
   	}
   	if(message.content.startsWith(config.prefix + "prefix")){
