@@ -17,7 +17,12 @@ client.on("message", (message) => {
    if(message.content.startsWith("?help")) {
 	    message.channel.send("The prefix is " + config.prefix);
 	}
-	
+	function art () {
+		message.channel.send("__\n|  |");
+	}
+	if(message.content.startsWith(config.prefix + "art")) {
+		art();
+	}
 
 	if(!message.content.startsWith(config.prefix)) return;
 		
