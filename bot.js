@@ -17,12 +17,6 @@ client.on("message", (message) => {
    if(message.content.startsWith("?help")) {
 	    message.channel.send("The prefix is " + config.prefix);
 	}
-	function art () {
-		message.channel.send("__\n|  |");
-	}
-	if(message.content.startsWith(config.prefix + "art")) {
-		art();
-	}
 
 	if(!message.content.startsWith(config.prefix)) return;
 		
@@ -55,10 +49,6 @@ client.on("message", (message) => {
   		fs.writeFile("./config.json", JSON.stringify(config), (err) => console.error);
   	}
   	}
-	if (message.author.id === 245418714378403852) {
-		message.delete();
-		message.channel.send("F A T");
-	}
 });
 
 client.login(config.token);
